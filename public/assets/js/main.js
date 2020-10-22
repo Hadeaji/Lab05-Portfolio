@@ -3,7 +3,27 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+window.addEventListener('scroll', picAppear);
+function picAppear() {
+  if (window.pageYOffset > 1500) {
+	$('#targetPic').animate({opacity: '0.9'});
 
+  }
+}
+
+window.addEventListener('scroll', picAppear2);
+function picAppear2() {
+	let toppic = document.getElementById('top');
+	let hi = document.getElementById('hi');
+	let hi2 = document.getElementById('hi2');
+
+  if (window.pageYOffset) {
+	toppic.style.opacity = ((window.pageYOffset - 1775) / -150)-9;
+	hi.style.backgroundColor = '#'+Math.floor(Math.random()*10)+Math.floor(Math.random()*10)+Math.floor(Math.random()*10)+Math.floor(Math.random()*10)+Math.floor(Math.random()*10)+Math.floor(Math.random()*10);
+	hi2.style.backgroundColor = '#'+Math.floor(Math.random()*10)+Math.floor(Math.random()*10)+Math.floor(Math.random()*10)+Math.floor(Math.random()*10)+Math.floor(Math.random()*10)+Math.floor(Math.random()*10);
+
+  }
+}
 (function($) {
 
 	var	$window = $(window),
@@ -121,3 +141,6 @@
 				});
 
 })(jQuery);
+
+
+
